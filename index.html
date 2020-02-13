@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta property="og:site_name" content="Laracasts">
+    <meta property="fb:app_id" content="511211375738022">
+    <meta name="csrf-token" content="lBwB3hfvjhh19AOoytngW0GcYt6sj0FxU9BNMRyJ">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <title>PureDrizzle</title>
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#3668c9">
+  
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="prefetch" href="/series?curated">
+    <link rel="prefetch" href="/discuss">
+    <link rel="alternate" type="application/atom+xml" title="Laracasts" href="/feed">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=optional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,800&display=optional" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+   
+    <meta property="og:title" content="Laracasts">
+    <meta property="og:description" content="Push your web developments skills to the next level, through expert screencasts on Laravel, Vue, and so much more.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://laracasts.com">
+    <meta property="og:image" content="https://laracasts.com/images/laracasts-twitter-card.png">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:player" content="https://laracasts.com/videos/twitter-iframe.html">
+    <meta name="twitter:player:width" content="640" />
+    <meta name="twitter:player:height" content="360" />
+    <meta name="twitter:site" content="@laracasts">
+    <meta name="twitter:title" content="Laracasts">
+    <meta name="twitter:description" content="Push your web developments skills to the next level, through expert screencasts on Laravel, Vue, and so much more.">
+    <meta name="twitter:image" content="https://laracasts.com/images/laracasts-twitter-card.png">
+</head>
+
+<body class=" guest home ">
+    <script id="flash-template" type="text/template">
+        <div class="notification is-primary for-user" dusk="flash-notification">
+            <a href="#" class="notification-body inherits-color" target="_blank" rel="noreferrer noopener"></a>
+        </div>
+    </script>
+    <div id="root" class="page">
+        <div>
+            <div class="home-banner">
+                <nav class="section new-nav lg:tw-z-50 tw-py-4 md:tw-py-4 md:tw-mb-9 tw-bg-transparent">
+                    <div class="tw-flex tw-justify-between tw-h-full tw-items-center tw-relative">
+                        <div id="header-logo-arrow" class=" xl:tw-flex-1 tw-mr-4 xl:tw-mr-0" style="max-width: 50px;">
+                            <a href="#" @click.right.prevent="visitAssetsWebsite" class="tw-cursor-pointer tw-leading-none tw-block">
+                                <img src="images/home/puredrizzle-logo.png"/>
+                            </a>
+                        </div>
+                        <div class="md:tw-hidden tw-flex tw-items-center">
+                            <search-button id="mobile-search" class="tw-mr-4 " width="20">
+                            </search-button>
+                            <mobile-nav-menu></mobile-nav-menu>
+                        </div>
+                        <div class="tw-hidden md:tw-block tw-relative tw-flex-1">
+                            <div class="tw-flex tw-items-center tw-justify-end">
+                   
+                                <a href="#" class="tw-text-white hover:tw-text-white link tw-font-bold tw-uppercase tw-mx-6 tw-text-xs" @click.prevent="dispatch('Login')">
+Sign In
+</a>
+                                <a class="tw-text-white hover:tw-bg-white hover:tw-text-blue tw-font-bold tw-uppercase tw-border tw-rounded-full tw-text-xs tw-px-3 tw-py-2 tw-leading-tight" href="#" @click.prevent="dispatch('Join')">
+Get Started
+</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <series-mega-menu></series-mega-menu>
+                <div class="home-header section tw-flex tw-items-center phone:tw-py-0">
+                    <div class="header-social-links tw-z-10 tw-hidden xl:tw-block">
+                        <div class="tw-hidden md:tw-flex md:tw-flex-col md:tw-h-full md:tw-items-start md:tw-justify-center">
+                            <a href="#" target="_blank" rel="noreferrer">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19" class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hover:tw-text-blue tw-transition-all">
+<g class="tw-fill-current" fill-rule="nonzero">
+<path d="M6.4 0H5.371l-.685 2.629L4 0H2.857c.229.686.457 1.257.686 1.943.343.914.571 1.714.571 2.171v2.743h1.029V4.114L6.4 0zm2.743 5.143V3.429c0-.572-.114-.915-.343-1.258-.229-.342-.571-.457-1.029-.457-.457 0-.8.229-1.028.572-.229.228-.343.571-.343 1.143v1.828c0 .572.114.914.343 1.143.228.343.571.457 1.028.457.458 0 .8-.228 1.029-.571.229-.115.343-.572.343-1.143zm-.914.228c0 .458-.115.686-.458.686-.342 0-.457-.228-.457-.686V3.2c0-.457.115-.686.457-.686.343 0 .458.229.458.686v2.171zm4.342 1.486V1.714h-.914V5.6c-.228.343-.343.457-.571.457a.246.246 0 0 1-.229-.228V1.714h-.914v4c0 .343 0 .572.114.8 0 .229.229.343.572.343.342 0 .685-.228 1.028-.571v.571h.914zM13.029 12c-.343 0-.458.229-.458.686v.457h.915v-.457c0-.457-.115-.686-.457-.686zM9.714 12c-.114 0-.343.114-.457.229v3.085c.114.115.343.229.457.229.229 0 .343-.229.343-.686v-2.171c0-.457-.114-.686-.343-.686z" />
+<path d="M15.314 9.486C15.086 8.686 14.4 8 13.714 8 11.886 7.771 9.943 7.771 8 7.771c-1.943 0-3.771 0-5.714.229-.686 0-1.372.686-1.6 1.486-.229 1.143-.229 2.4-.229 3.543 0 1.142 0 2.4.229 3.542.228.8.8 1.372 1.6 1.486 1.943.229 3.771.229 5.714.229 1.943 0 3.771 0 5.714-.229.8-.114 1.486-.686 1.6-1.486.229-1.142.229-2.4.229-3.542 0-1.143 0-2.4-.229-3.543zM4.8 10.514H3.657v5.829H2.63v-5.829H1.6V9.486h3.2v1.028zm2.743 5.829h-.914v-.572c-.343.458-.686.572-1.029.572-.343 0-.457-.114-.571-.343 0-.114-.115-.343-.115-.8v-4h.915v4c0 .114.114.229.228.229.229 0 .343-.115.572-.458V11.2h.914v5.143zm3.428-1.6c0 .457 0 .8-.114 1.028-.114.343-.343.572-.686.572-.342 0-.685-.229-.914-.572v.458h-.914V9.486h.914v2.171c.343-.343.572-.571.914-.571.343 0 .572.228.686.571.114.229.114.572.114 1.029v2.057zm3.429-.8h-1.829v.914c0 .457.115.686.458.686.228 0 .342-.114.457-.343v-.571h.914V15.314c0 .229-.114.343-.229.572-.228.343-.571.571-1.142.571-.458 0-.8-.228-1.143-.571-.229-.229-.343-.686-.343-1.143v-1.714c0-.572.114-.915.228-1.143.229-.343.572-.572 1.143-.572.457 0 .8.229 1.029.572.228.228.228.685.228 1.143v.914h.229z" />
+</g>
+</svg>
+</a>
+                            <a href="#" target="_blank" rel="noreferrer">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hover:tw-text-blue tw-transition-all">
+<path class="tw-fill-current" fill-rule="nonzero" d="M9 0C4.037 0 0 4.037 0 9c0 4.962 4.037 9 9 9 4.962 0 9-4.038 9-9 0-4.963-4.037-9-9-9zm4.015 6.94c.004.09.006.18.006.27 0 2.737-2.083 5.892-5.894 5.892a5.86 5.86 0 0 1-3.175-.93 4.158 4.158 0 0 0 3.067-.858 2.074 2.074 0 0 1-1.936-1.439 2.088 2.088 0 0 0 .936-.034 2.072 2.072 0 0 1-1.662-2.032v-.026c.28.155.6.249.938.26a2.07 2.07 0 0 1-.64-2.766 5.882 5.882 0 0 0 4.269 2.165 2.071 2.071 0 0 1 3.53-1.89 4.135 4.135 0 0 0 1.316-.503 2.08 2.08 0 0 1-.912 1.146c.419-.05.82-.16 1.19-.326-.277.415-.628.78-1.033 1.071z" />
+</svg>
+</a>
+                            <a href="#" target="_blank" rel="noreferrer">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 30 29" class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hover:tw-text-blue tw-transition-all">
+<path class="tw-fill-current" fill-rule="nonzero" d="M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z"></path>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="container tw-w-full tw-mx-auto md:tw-flex phone:tw-mt-2">
+                        <div class="md:tw-max-w-md xl:tw-max-w-full">
+                            <div class="header-description lg:tw-ml-15 md:tw-pr-10 lg:tw-pr-0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h1 class="header-title">
+                                            Easy, fast, and flexible compute
+                                        </h1>
+                                        <p class="header-description-body widescreen:tw-pr-10">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam ad repellat quos voluptas nostrum labore a doloribus nesciunt. Provident reprehenderit earum quo dolor tenetur similique dolores. Numquam reiciendis illo aliquam?
+          
+                                        </p>
+                                        <div class="tw-mx-auto">
+       
+                                            <a href="#" class="tw-btn tw-btn-outlined tw-border-blue hover:tw-bg-white tw-text-white tw-mx-auto tw-px-5 tw-max-w-xs" style="box-shadow: 0 0 10px 0 #268ef7;">
+        Click Here
+        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/home/truckvan.png" class="home-banner-illustration tw-hidden md:tw-block tw-absolute tw-right-0 tw-z-10 lg:tw-mx-10 home-bike" style="mix-blend-mode: normal; cursor: pointer;max-width: 500px;" alt="Laracasts Illustration" @click="$modal.show('promo-modal')">
+                    </div>
+                </div>
+            </div>
+            <section id="home-skills" class="md:tw-pb-0 lg:tw-pt-0 md:tw-mb-10 lg:tw--mt-8">
+                <div class="container">
+                    <div class="tw-flex md:tw-justify-center tw-pb-5 md:tw-pb-0 lg:tw-pb-10 lg:tw-mb-10">
+                        <div class="home-skills-stat tw-rounded-lg tw-text-center " >
+                            <div class="tw-mb-1 tw-mx-auto" style="width: 50px">
+                                <img src="images/icons/order(1).svg" alt="Hours of Learning icon" class="w-100">
+                            </div>
+                            <div class="tw-text-xl tw-text-black tw-mb-1">
+                                <count :end="273" :increment="5"></count>
+                            </div>
+                            <div class="tw-text-grey-30 tw-text-2xs">No  <span class="tw-hidden md:tw-inline">Minimum Order</span></div>
+                        </div>
+                        <div class="home-skills-stat home-skills-stat-lessons tw-rounded-lg tw-text-center">
+                            <div class="tw-mb-1 tw-mx-auto" style="width: 50px">
+                                <img src="images/icons/tracking.svg" alt="Lessons available icon" class="w-100">
+                            </div>
+                            <div class="tw-text-xl tw-text-black tw-mb-1">
+                                <count :end="1621" :increment="50"></count>
+                            </div>
+                            <div class="tw-text-grey-30 tw-text-2xs">Live Order Tracking</div>
+                        </div>
+                        <div class="home-skills-stat tw-rounded-lg tw-text-center">
+                            <div class="tw-mb-1 tw-mx-auto" style="width: 50px">
+                                <img src="images/icons/speed.svg" alt="Series available icon" class="w-100">
+                            </div>
+                            <div class="tw-text-xl tw-text-black tw-mb-1">
+                                <count :end="102" :increment="3"></count>
+                            </div>
+                            <div class="tw-text-grey-30 tw-text-2xs">Lightning Fast Speed</div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <section class="tw-hidden md:tw-block tw-p-0">
+                <div>
+                    <testimonials></testimonials>
+                </div>
+            </section>
+            <section class="plans-section lg:tw-py-12">
+                <div class="container"> 
+                    <div><div class="mobile:tw-flex-1 lg:tw-w-3/4 lg:tw-mx-auto tw-text-center tw-mb-10  tw-text-white"><h3 class="centered-heading">
+                        Choose the plan that fits your needs.
+                    </h3> <p class="tw-text-grey-dark md:tw-w-4/5 md:tw-mx-auto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam suscipit pariatur corporis iusto debitis cumque natus voluptatibus illo, distinctio a earum quibusdam consequuntur labore, explicabo soluta. Porro natus molestias molestiae..
+                    </p></div> <div><div slot="main"><div class="tw-mx-auto" style="max-width: 1500px;"> <div class="plans md:tw-flex tw-justify-center lg:tw-pb-6"><div class="plan-wrap tw-flex-1 tw-mx-auto md:tw-mx-1 lg:tw-mx-0"><div class="plan tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Standard</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>15</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/standard.png" alt="Standard Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/standard.png"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black  mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> <a href="#" class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-text-black tw-border-grey-panel tw-bg-grey-panel">Choose Plan</a></div> <div></div></div></div><div class="plan-wrap tw-flex-1 tw-mx-auto md:tw-mx-1 lg:tw-mx-0"><div class="plan tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Gold</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>99</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/waterdispenser.jpg" alt="Gold Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/waterdispenser.jpg"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black  mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> <a href="#" class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-btn-blue">Choose Plan</a></div> <div></div></div></div><div class="plan-wrap tw-flex-1 tw-mx-auto md:tw-mx-1 lg:tw-mx-0"><div class="plan tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Platinum</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>350</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/waterdispenser.jpg" alt="Forever Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/waterdispenser.jpg"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> <a href="#" class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-text-black tw-border-grey-panel tw-bg-grey-panel">Choose Plan</a></div> <div></div></div></div> <!----> <!----></div></div></div></div></div>
+                </div>
+            </section>
+            <section class="about-jeffrey">
+                <div class="container">
+                    <div class="tw-flex tw-flex-col-reverse lg:tw-flex-row tw-items-center">
+                        <div class="lg:tw-pr-15 lg:tw-w-2/3 lg:tw-mx-auto tw-text-center lg:tw-text-left tw-flex-1">
+                            <h3 class="tw-text-3xl tw-mb-4 tw-tracking-normal tw-text-black">There's a chance you may already know me!</h3>
+                            <div class="content tw-leading-loose lg:tw-mb-10">
+                                <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium dicta fugiat eum velit consequuntur placeat ratione quis, veniam dolores ad corrupti mollitia impedit perferendis? Quaerat totam blanditiis deserunt eligendi?
+                                </p>
+                                <p>
+                                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel esse numquam, hic officiis iusto velit cupiditate dolorem corporis facere animi laudantium ullam possimus obcaecati ab repudiandae consequuntur ipsa, enim assumenda.
+                                </p>
+                                <p>
+                                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure perspiciatis, tempore 
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <img data-src="images/home/jeffrey-illustrated-avatar.svg" alt="Jeffrey Way's avatar" class="lazyload tw-w-32 lg:tw-w-64" style="max-width: 325px" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer-wrap mobile:tw-text-lg">
+                
+                <section class="footer-section bottom tw-text-center md:tw-text-left tw-py-0">
+                    <footer class="container">
+                        <div class="md:tw-flex md:mb-3 pt-5 tw-justify-center">
+                            <div class="">
+                                <div class="tw-mb-3 tw-flex tw-justify-center md:tw-block">
+                                    <!-- <img src="images/home/puredrizzle-logo.png" class="w-100"/> -->
+                                </div>
+                                <p class="tw-mb-8 tw-text-white tw-leading-loose">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nesciunt. Est hic ab facilis tempora 
+                                </p>
+                                <div class="d-flex tw-justify-center">
+                                    <div class="tw-flex tw-w-42 md:tw-w-28 tw-justify-between tw-items-center phone:tw-m-auto mobile:tw-mb-8">
+                                        <a href="#" target="_blank" rel="noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black tw-transition-all">
+    <g class="tw-fill-current" fill-rule="nonzero">
+    <path d="M6.4 0H5.371l-.685 2.629L4 0H2.857c.229.686.457 1.257.686 1.943.343.914.571 1.714.571 2.171v2.743h1.029V4.114L6.4 0zm2.743 5.143V3.429c0-.572-.114-.915-.343-1.258-.229-.342-.571-.457-1.029-.457-.457 0-.8.229-1.028.572-.229.228-.343.571-.343 1.143v1.828c0 .572.114.914.343 1.143.228.343.571.457 1.028.457.458 0 .8-.228 1.029-.571.229-.115.343-.572.343-1.143zm-.914.228c0 .458-.115.686-.458.686-.342 0-.457-.228-.457-.686V3.2c0-.457.115-.686.457-.686.343 0 .458.229.458.686v2.171zm4.342 1.486V1.714h-.914V5.6c-.228.343-.343.457-.571.457a.246.246 0 0 1-.229-.228V1.714h-.914v4c0 .343 0 .572.114.8 0 .229.229.343.572.343.342 0 .685-.228 1.028-.571v.571h.914zM13.029 12c-.343 0-.458.229-.458.686v.457h.915v-.457c0-.457-.115-.686-.457-.686zM9.714 12c-.114 0-.343.114-.457.229v3.085c.114.115.343.229.457.229.229 0 .343-.229.343-.686v-2.171c0-.457-.114-.686-.343-.686z" />
+    <path d="M15.314 9.486C15.086 8.686 14.4 8 13.714 8 11.886 7.771 9.943 7.771 8 7.771c-1.943 0-3.771 0-5.714.229-.686 0-1.372.686-1.6 1.486-.229 1.143-.229 2.4-.229 3.543 0 1.142 0 2.4.229 3.542.228.8.8 1.372 1.6 1.486 1.943.229 3.771.229 5.714.229 1.943 0 3.771 0 5.714-.229.8-.114 1.486-.686 1.6-1.486.229-1.142.229-2.4.229-3.542 0-1.143 0-2.4-.229-3.543zM4.8 10.514H3.657v5.829H2.63v-5.829H1.6V9.486h3.2v1.028zm2.743 5.829h-.914v-.572c-.343.458-.686.572-1.029.572-.343 0-.457-.114-.571-.343 0-.114-.115-.343-.115-.8v-4h.915v4c0 .114.114.229.228.229.229 0 .343-.115.572-.458V11.2h.914v5.143zm3.428-1.6c0 .457 0 .8-.114 1.028-.114.343-.343.572-.686.572-.342 0-.685-.229-.914-.572v.458h-.914V9.486h.914v2.171c.343-.343.572-.571.914-.571.343 0 .572.228.686.571.114.229.114.572.114 1.029v2.057zm3.429-.8h-1.829v.914c0 .457.115.686.458.686.228 0 .342-.114.457-.343v-.571h.914V15.314c0 .229-.114.343-.229.572-.228.343-.571.571-1.142.571-.458 0-.8-.228-1.143-.571-.229-.229-.343-.686-.343-1.143v-1.714c0-.572.114-.915.228-1.143.229-.343.572-.572 1.143-.572.457 0 .8.229 1.029.572.228.228.228.685.228 1.143v.914h.229z" />
+    </g>
+    </svg>
+    </a>
+                                        <a href="#" target="_blank" rel="noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black tw-transition-all" viewBox="0 0 18 18">
+    <path class="tw-fill-current" fill-rule="nonzero" d="M9 0C4.037 0 0 4.037 0 9c0 4.962 4.037 9 9 9 4.962 0 9-4.038 9-9 0-4.963-4.037-9-9-9zm4.015 6.94c.004.09.006.18.006.27 0 2.737-2.083 5.892-5.894 5.892a5.86 5.86 0 0 1-3.175-.93 4.158 4.158 0 0 0 3.067-.858 2.074 2.074 0 0 1-1.936-1.439 2.088 2.088 0 0 0 .936-.034 2.072 2.072 0 0 1-1.662-2.032v-.026c.28.155.6.249.938.26a2.07 2.07 0 0 1-.64-2.766 5.882 5.882 0 0 0 4.269 2.165 2.071 2.071 0 0 1 3.53-1.89 4.135 4.135 0 0 0 1.316-.503 2.08 2.08 0 0 1-.912 1.146c.419-.05.82-.16 1.19-.326-.277.415-.628.78-1.033 1.071z">
+    </svg>
+    </a>
+                                        <a href="#" target="_blank" rel="noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29" class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black tw-transition-all">
+    <path class="tw-fill-current" fill-rule="nonzero" d="M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z"></path>
+    </svg>
+    </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                           
+                        </div>
+                        <div class="tw-border-t tw-border-solid tw-border-transparent-10 tw-py-4 md:tw-mt-8 mobile:tw-text-lg">
+                            <div class="tw-text-transparent-50 tw-text-base md:tw-text-xs tw-text-center">
+                                <p class="tw-mb-5 md:tw-mb-2 tw-tracking-normal">
+                                    &copy; Puredrizzle 2020. All rights reserved. <br class="md:tw-hidden" />Yes, all of them. That means you, Todd.
+                                </p>
+                                <p class="tw-tracking-normal">
+                                    <span class="mobile:tw-block">Designed with <img src="images/icons/heart.svg" alt="heart" class="tw-px-1 tw-relative heart-pulse tw-inline" style="top: 2px" loading="lazy"> by <a href="#" class="tw-font-bold inherits-color link hover:tw-text-white">Tuds</a>.</span>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <login-modal token="lBwB3hfvjhh19AOoytngW0GcYt6sj0FxU9BNMRyJ"></login-modal>
+        <join initial-category="individual"></join>
+        <testimonials-modal></testimonials-modal>
+        <search-modal></search-modal>
+        <promo-modal></promo-modal>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js" type="fd0216431e19e743a4ce2be0-text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js" type="fd0216431e19e743a4ce2be0-text/javascript"></script>
+    
+    <script type="fd0216431e19e743a4ce2be0-text/javascript">
+        window.lazySizesConfig = {
+            addClasses: true
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js" type="fd0216431e19e743a4ce2be0-text/javascript"></script>
+    <script type="fd0216431e19e743a4ce2be0-text/javascript">
+    </script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="fd0216431e19e743a4ce2be0-|49" defer=""></script>
+</body>
+
+</html>
