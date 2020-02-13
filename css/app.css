@@ -10208,19 +10208,3 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     }
 }
 
-/* .home-bike{
-    animation: bike 5s ease-in infinite;
-}
-
-@keyframes bike {
-    0%{
-        transform: translateX(40%);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(-40%);
-        opacity: 0;
-    }
-} */
