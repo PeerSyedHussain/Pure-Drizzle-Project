@@ -5301,9 +5301,7 @@ input[type=range]::-moz-focus-outer {
 @media screen and (min-width:1100px) and (max-width:2000px) {
     .plans-section {
         background-image: url(./../images/home/plans-bg-left-wire.svg), url(./../images/home/plans-bg-left.svg), url(./../images/home/plans-bg-right.svg);
-        -webkit-background-image:url(./../images/home/plans-bg-left-wire.svg), url(./../images/home/plans-bg-left.svg), url(./../images/home/plans-bg-right.svg) ;
         background-repeat: no-repeat, no-repeat, no-repeat;
-
         background-position: 10%, 0 100%, 100% 100%
     }
 }
@@ -10210,6 +10208,7 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     }
 }
 
+<<<<<<< HEAD
 /* .home-bike{
     animation: bike 5s ease-in infinite;
 }
@@ -10226,3 +10225,5 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         opacity: 0;
     }
 } */
+=======
+>>>>>>> 22b680ee430c3fed6c8a49423e6461deb10f1724
