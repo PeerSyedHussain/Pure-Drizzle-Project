@@ -10208,3 +10208,22 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     }
 }
 
+<<<<<<< HEAD
+/* .home-bike{
+    animation: bike 5s ease-in infinite;
+}
+
+@keyframes bike {
+    0%{
+        transform: translateX(40%);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-40%);
+        opacity: 0;
+    }
+} */
+=======
+>>>>>>> 22b680ee430c3fed6c8a49423e6461deb10f1724
