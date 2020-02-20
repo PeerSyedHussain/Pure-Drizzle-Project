@@ -5143,7 +5143,9 @@ input[type=range]::-moz-focus-outer {
   opacity: 0.5;
   z-index: 1;
 } */
-
+.plan-selection-option button{
+    border-radius:18px;
+}
 
 
 @media(max-width:992px){
