@@ -49,18 +49,27 @@
     <div id="root" class="page">
         <div>
             <div class="home-banner">
-                <nav class="section new-nav lg:tw-z-50 tw-py-4 md:tw-py-4 md:tw-mb-9 tw-bg-transparent">
+                <!-- <video id="videoBG" poster="poster.JPG" autoplay muted loop style="position: absolute;width: 100%;">
+                    <source src="https://media.istockphoto.com/videos/pouring-glass-of-water-real-video-video-id689344196" type="video/mp4">
+                </video> -->
+                <!-- <div class="video-background-holder">
+                    <div class="video-background-overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                          <source src="https://media.istockphoto.com/videos/pouring-glass-of-water-real-video-video-id689344196" type="video/mp4">
+                    </video>
+                    <div class="video-background-content container h-100">
+                     
+                    </div>
+                  </div> -->
+            <div class="container">
+                <nav class="section new-nav lg:tw-z-50 tw-py-4 md:tw-py-4  tw-bg-transparent">
                     <div class="tw-flex tw-justify-between tw-h-full tw-items-center tw-relative">
                         <div id="header-logo-arrow" class=" xl:tw-flex-1 tw-mr-4 xl:tw-mr-0" style="max-width: 50px;">
                             <a href="#" @click.right.prevent="visitAssetsWebsite" class="tw-cursor-pointer tw-leading-none tw-block">
                                 <img src="images/home/puredrizzle-logo.png"/>
                             </a>
                         </div>
-                        <div class="md:tw-hidden tw-flex tw-items-center">
-                            <search-button id="mobile-search" class="tw-mr-4 " width="20">
-                            </search-button>
-                            <mobile-nav-menu></mobile-nav-menu>
-                        </div>
+                        
                         <div class="tw-hidden md:tw-block tw-relative tw-flex-1">
                             <div class="tw-flex tw-items-center tw-justify-end">
                    
@@ -70,11 +79,23 @@ Sign In
                                 <a class="tw-text-white hover:tw-bg-white hover:tw-text-blue tw-font-bold tw-uppercase tw-border tw-rounded-full tw-text-xs tw-px-3 tw-py-2 tw-leading-tight" href="#" @click.prevent="dispatch('Join')">
 Get Started
 </a>
+
+                                <a class="nav-link dropdown-toggle tw-text-white hover:tw-text-white link tw-font-bold tw-uppercase  tw-text-xs" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+  
                             </div>
                         </div>
                     </div>
                 </nav>
-                <series-mega-menu></series-mega-menu>
+            </div>
+                
+               
                 <div class="home-header section tw-flex tw-items-center phone:tw-py-0">
                     <div class="header-social-links tw-z-10 tw-hidden xl:tw-block">
                         <div class="tw-hidden md:tw-flex md:tw-flex-col md:tw-h-full md:tw-items-start md:tw-justify-center">
@@ -111,35 +132,298 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
 </a>
                         </div>
                     </div>
-                    <div class="container tw-w-full tw-mx-auto md:tw-flex phone:tw-mt-2">
-                        <div class="md:tw-max-w-md xl:tw-max-w-full">
-                            <div class="header-description lg:tw-ml-15 md:tw-pr-10 lg:tw-pr-0">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h1 class="header-title">
-                                            Easy, fast, and flexible compute
-                                        </h1>
-                                        <p class="header-description-body widescreen:tw-pr-10">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam ad repellat quos voluptas nostrum labore a doloribus nesciunt. Provident reprehenderit earum quo dolor tenetur similique dolores. Numquam reiciendis illo aliquam?
-          
-                                        </p>
-                                        <div class="tw-mx-auto">
-       
-                                            <a href="#" class="tw-btn tw-btn-outlined tw-border-blue hover:tw-bg-white tw-text-white tw-mx-auto tw-px-5 tw-max-w-xs" style="box-shadow: 0 0 10px 0 #268ef7;">
-        Click Here
-        </a>
+                    <div class="container tw-w-full tw-mx-auto  phone:tw-mt-2 tw-justify-center">
+                        <div >
+                            <form class="d-flex justify-content-between align-items-center user-form">
+                                <div class="form-group col-lg-3 col-md-12 ">
+                                  <label for="location" class="tw-text-white">Where do you want us to deliver?</label>
+                                  <input type="text" class="form-control" id="location" placeholder="Type your address here">
+                                </div>
+                                
+                                <div class="form-group col-lg-3 col-md-12">
+                                    <label for="quantity"class="tw-text-white">Jugs You Need?</label>
+                                    <input type="text" class="form-control" id="quantity" placeholder="Number of jugs">
+                                </div>
+                                <div class="form-group col-lg-3 col-md-12 ">
+                                    <label for="Price"class=" tw-text-white">Price</label>
+                                    <input type="text" class="form-control" id="Price" placeholder="Price">
+                                </div>
+                                <div class="form-group mb-0 col-lg-2 text-right col-md-12 ">
+                                    <button type="button" class="btn btn-primary">Order Now</button>
+                                </div>
+                              </form>
+                        </div>
+                                
+                       
+                       <div class="row tw-justify-center my-2">
+                            <p class="tw-text-white">Or Choose any one plan Below</p>
+                       </div>
+                       
+                       <div class="row tw-justify-center ">
+                            <div class="col-md-4 col-lg-4 my-3">
+                                 <div class="banner-plan-view"> 
+                                     <!-- <h5 class="text-center mb-3">Jugs Only</h5>  -->
+                                    <div class="plan flex-column tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Standard</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>15</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/standard.png" alt="Standard Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/standard.png"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black  mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> </div> <div class='d-flex'><a href="#"data-toggle="modal" data-target="#exampleModalCenter1" class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-text-black tw-border-grey-panel tw-bg-grey-panel">Know More</a>  <button class="btn btn-primary">Order</button></div></div>
+                                    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLongTitle">Jugs Only</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <ul>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You Pay Just $4.49/jug With Delivery
+                                                        </li>
+                                                        <li class="d-flex">                                                
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Login in to our website,order your jugs,get it delivered within 24hrs,no phone calls needed
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You just order 18.9L Water jugs,no contract with coolers
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Flexible ordering,only When you want jugs
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>jugs delivered to you,for less than the cost you paid for pickup to your previous supplier
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get to see your dashboard,your profile,history of orders,your deposits etc
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                          </div>
                                         </div>
+                                      </div>
+<!--                                     
+                                    <div class="text-center mt-2">
+                                        <button class="btn btn-primary">Order</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 my-3">
+                                 <div class="banner-plan-view">
+                                    <!-- <h5 class="text-center mb-3">Jugs & Rental Cooler</h5>  -->
+                                    
+                                    <div class="plan flex-column  tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Gold</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>99</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/waterdispenser.jpg" alt="Gold Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/waterdispenser.jpg"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black  mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-btn-blue">Know More</a></div> <div></div></div>
+                                    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLongTitle">Jugs & Rental Cooler</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <ul>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get discounts on the jug,so you just pay $4.10 per jug with delivery
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get a cooler of your choice for a minimum monthly rental cost,starting from $8.99.No deposit for the cooler
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Cooler will be replaced soon,in case of repairs
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Login to our website,order your jugs,get it delivered within 24hrs.No phone calls needed.
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Get your jugs delivered to you,for less than the cost you paid for pickup to your previous supplier
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get to see your dashboard,your profile,history of orders,your deposit etc.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                    <div class="text-center mt-2">
+                                        <button class="btn btn-primary">Subscribe</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex tw-justify-center align-items-center">
-                            <img src="images/home/truckvan.png" class="home-banner-illustration tw-hidden md:tw-block tw-absolute tw-right-0 tw-z-10 lg:tw-mx-10 home-bike" style="mix-blend-mode: normal; cursor: pointer;max-width: 500px;" alt="Laracasts Illustration" @click="$modal.show('promo-modal')">
-                        </div>
+                            <div class="col-md-4 col-lg-4 my-3" >
+                                <div class="banner-plan-view">
+                                    <!-- <h5 class="text-center mb-3">Jugs & Free Cooler</h5>  -->
+                                    
+                                    <div class="plan tw-mb-5 md:tw-mb-0 tw-relative tw-z-10 tw-bg-white tw-rounded-lg tw-px-6 md:tw-px-4 tw-pt-5 tw-pb-6 tw-text-center tw-h-full tw-mx-3 tw-flex mobile:tw-mx-auto"><div class="tw-flex tw-flex-col tw-justify-around tw-h-full tw-w-full"><div class="tw-flex tw-mb-4 tw-items-center"><h5 class="tw-uppercase tw-font-bold tw-text-black tw-text-base md:tw-text-xs tw-mr-auto"><a href="#" class="inherits-color">Platinum</a></h5> <div class="plan-price tw-relative tw-font-semibold tw-text-5xl tw-leading-none"><div class="tw-text-blue tw-flex tw-items-baseline tw-font-semibold tw-relative"><span class="dollar tw-text-lg">$</span> <span>350</span> <!----></div></div></div> <a href="#" class="tw-flex tw-justify-center"><img data-src="images/home/waterdispenser.jpg" alt="Forever Plan" loading="lazy" class="tw-hidden md:tw-block tw-relative lazyloaded"  src="images/home/waterdispenser.jpg"></a> <p class="tw-mb-4 tw-px-4 tw-text-lg md:tw-text-sm lg:tw-text-base tw-text-black mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> <a href="#" data-toggle="modal" data-target="#exampleModalCenter3" class="plan-start-learning-button tw-btn mobile:tw-mx-auto tw-w-full tw-text-black tw-border-grey-panel tw-bg-grey-panel">Know More</a></div> <div></div></div>
+                                    <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLongTitle">Jugs & Free Cooler</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <ul>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get a free cooler of your choice untill you're with us.
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You pay a little extra on your first 2 jugs and you pay less if number of jugs a month goes above 2
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Cooler will be replaced soon,in case of repairs
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Login to our website,order your jugs,get it delivered within 24hrs.No phone calls needed.
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>Get your jugs delivered to you,for less than the cost you paid for pickup to your previous supplier
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                                width="20" height="20"
+                                                                viewBox="0 0 172 172"
+                                                                style=" fill:#000000;margin-right: 10px;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#087fc8"></path><path d="M137.33125,82.47266l-47.43437,-29.12578c-1.31016,-0.80625 -2.98984,-0.83984 -4.33359,-0.10078c-1.34375,0.73906 -2.18359,2.18359 -2.18359,3.72891v58.01641c0,1.54531 0.83984,2.95625 2.18359,3.72891c0.63828,0.36953 1.37734,0.5375 2.08281,0.5375c0.77266,0 1.54531,-0.20156 2.21719,-0.63828l47.43438,-28.89062c1.27656,-0.77266 2.04922,-2.15 2.04922,-3.62813c0.03359,-1.47812 -0.73906,-2.85547 -2.01562,-3.62812z" fill="#ffffff"></path><path d="M115.39453,77.09766h-78.71016c-2.25078,0 -4.03125,1.81406 -4.03125,4.03125v9.70859c0,2.25078 1.81406,4.03125 4.03125,4.03125h78.71016c2.25078,0 4.03125,-1.81406 4.03125,-4.03125v-9.70859c0.03359,-2.21719 -1.78047,-4.03125 -4.03125,-4.03125z" fill="#ffffff"></path></g></g>
+                                                                </svg>
+                                                            </span>You get to see your dashboard,your profile,history of orders,your deposit etc.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                    <div class="text-center mt-2">
+                                        <button class="btn btn-primary">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                        
+                        
                     </div>
                 </div>
             </div>
-            <section id="home-skills" class="md:tw-pb-0 lg:tw-pt-0 md:tw-mb-10 lg:tw--mt-8">
+            <section id="home-skills" class="md:tw-pb-0 lg:tw-pt-0 md:tw-mb-10 my-4">
                 <div class="container">
                     <div class="tw-flex md:tw-justify-center tw-pb-5 md:tw-pb-0 lg:tw-pb-10 lg:tw-mb-10">
                         <div class="home-skills-stat tw-rounded-lg tw-text-center " >

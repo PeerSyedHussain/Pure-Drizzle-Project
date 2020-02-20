@@ -5097,16 +5097,109 @@ input[type=range]::-moz-focus-outer {
 
 .home-banner {
     background-color: #1644ad;
-    padding-bottom: 2rem
+    padding-bottom: 2rem;
+    /* background: url(https://i.pinimg.com/originals/1f/f5/92/1ff592321f82159eeaaad94fa533bc04.jpg) no-repeat; */
+    /* background-size: cover; */
+    /* position: relative; */
+    /* min-height: 100vh !important; */
 }
 
+/* .video-background-holder {
+  position: relative;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+} */
+
+
+
+@media(max-width:992px){
+    .user-form{
+        flex-direction: column;
+    }    
+}
+
+.banner-plan-view li{
+    margin:10px 0px;
+}
+/* @media(max-width:1024px){
+    #videoBG{
+        display: none;
+    }    
+}
+
+@media(min-width:1024px){
+    #videoBG{
+        display: block;
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 100%;
+    }    
+} */
+.banner-plan-view li svg{
+    transition: all 0.2s linear;
+}
+.banner-plan-view li:hover svg{
+    transform: translateX(50%);
+}
+
+.home-header{
+    padding:0px 20px ;
+}
+@media(min-width:1500px){
+    .home-header{
+        margin:48px 0px ;
+    }
+}
+
+.new-nav.section{
+    padding-left: 24px;
+    padding-right: 0px;
+}
 @media(min-width:768px) {
     .home-banner {
         background: url(./../images/home/home-bg-top.svg) no-repeat;
         background-size: 2000px auto;
         background-position: bottom;
+        /* background: url(https://i.pinimg.com/originals/1f/f5/92/1ff592321f82159eeaaad94fa533bc04.jpg) no-repeat;
+        background-size: cover; */
         padding-bottom: 150px;
         margin-bottom: -60px
+        
     }
 }
 
