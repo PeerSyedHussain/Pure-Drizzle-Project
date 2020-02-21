@@ -5149,7 +5149,7 @@ input[type=range]::-moz-focus-outer {
 }
 @media(max-width:993px){
     #quantity{
-        width: 100% !important;
+        width: 50% !important;
     }   
 }
 .quantity-right-plus{
