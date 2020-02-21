@@ -5152,7 +5152,25 @@ input[type=range]::-moz-focus-outer {
         width: 100% !important;
     }   
 }
-.plan-selection-option button{
+.quantity-right-plus{
+    background-color:#3228a7;
+    border-color:#3228a7;
+    color: #fff;
+}
+.quantity-right-plus:hover{
+    background-color: #0e00b7;
+    border-color:#0e00b7;
+}
+.quantity-left-minus{
+    background-color:#359ddc;
+    border-color:#359ddc;
+    color: #fff;
+}
+.quantity-left-minus:hover{
+    background-color:#1989cc;
+    border-color:#1989cc;
+}
+.plan-selectiton-option button{
     border-radius:18px;
 }
 
