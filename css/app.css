@@ -5103,8 +5103,9 @@ input[type=range]::-moz-focus-outer {
     /* background-size: cover; */
     position: relative; 
     min-height: 100vh !important;
+    overflow: hidden;
 }
-
+.{over}
 #bg-video{
     position: absolute;
     top:0;
