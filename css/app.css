@@ -5098,6 +5098,7 @@ input[type=range]::-moz-focus-outer {
 .home-banner {
     background-color: #1644ad;
     padding-bottom: 2rem;
+    
     /* background: url(https://i.pinimg.com/originals/1f/f5/92/1ff592321f82159eeaaad94fa533bc04.jpg) no-repeat; */
     /* background-size: cover; */
     /* position: relative; */
