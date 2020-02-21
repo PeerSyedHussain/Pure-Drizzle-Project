@@ -5105,7 +5105,13 @@ input[type=range]::-moz-focus-outer {
     min-height: 100vh !important;
     overflow: hidden;
 }
-
+.amt{
+    font-size: 38px;
+}
+.price-show{
+    margin-top:6px;
+    color:#fff;
+}
 #bg-video{
     position: absolute;
     top:0;
