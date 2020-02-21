@@ -5143,6 +5143,15 @@ input[type=range]::-moz-focus-outer {
   opacity: 0.5;
   z-index: 1;
 } */
+
+.tw-bg-white-transparent{
+    background-color: #ffffff70 !important;
+}
+@media(max-width:993px){
+    #quantity{
+        width: 100% !important;
+    }   
+}
 .plan-selection-option button{
     border-radius:18px;
 }
