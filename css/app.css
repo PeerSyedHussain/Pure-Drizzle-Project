@@ -5108,6 +5108,9 @@ input[type=range]::-moz-focus-outer {
 .amt{
     font-size: 38px;
 }
+.plan-selection-option button{
+    border-radius:18px;
+}
 .price-show{
     margin-top:6px;
     color:#fff;

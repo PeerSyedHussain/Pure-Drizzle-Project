@@ -276,7 +276,7 @@ object,
 svg,
 video {
     display: block;
-    vertical-align: middle
+    /* vertical-align: middle; */
 }
 
 img,
@@ -920,7 +920,7 @@ a.box:active {
 .input.is-inline,
 .is-inline.textarea {
     display: inline;
-    width: auto
+    /* width: auto */
 }
 
 .textarea {
@@ -2292,10 +2292,7 @@ section>section {
     color: inherit
 }
 
-.ais-refinement-list__count a:hover,
-.tag a:hover {
-    /* text-decoration: underline */
-}
+
 
 #root button:focus,
 #root input:focus,
@@ -2532,7 +2529,7 @@ input:checked+.slider:before {
         height: 14px;
         margin: 0 .25em 0 0;
         padding: 0;
-        vertical-align: top;
+        /* vertical-align: top; */
         width: 14px;
         background-color: #e5e5e5;
         border-radius: 2px;
@@ -4191,9 +4188,7 @@ a.tag:hover.is-primary {
     color: inherit
 }
 
-.ad-description>a:hover {
-    /* text-decoration: underline */
-}
+
 
 .fade-enter-active,
 .fade-leave-active {
@@ -5495,9 +5490,6 @@ input[type=range]::-moz-focus-outer {
     font-weight: 700
 }
 
-.series-banner .generic-content a:hover {
-    /* text-decoration: underline */
-}
 
 .series-banner .generic-content strong {
     color: inherit
@@ -6527,9 +6519,6 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     border: none
 }
 
-.team-meet-jeffrey .content a:hover {
-    /* text-decoration: none */
-}
 
 .team-plans:before {
     top: 0
@@ -10357,7 +10346,6 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     }
 }
 
-<<<<<<< HEAD
 /* .home-bike{
     animation: bike 5s ease-in infinite;
 }
@@ -10374,5 +10362,3 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         opacity: 0;
     }
 } */
-=======
->>>>>>> 22b680ee430c3fed6c8a49423e6461deb10f1724
