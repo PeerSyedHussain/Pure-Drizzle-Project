@@ -438,13 +438,13 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                                 
                                                 <div class="input-group" style="width: 35%;">
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
+                                                        <button type="button" class="calculate-left-minus btn btn-number"  data-type="minus" data-field="">
                                                             <span class="glyphicon glyphicon-minus"></span>
                                                         </button>
                                                     </span>
                                                     <input type="text" id="calculate_price" name="quantity" class="form-control input-number tw-text-center" placeholder="jugs" value="10" min="1" max="100">
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="quantity-right-plus btn  btn-number" data-type="plus" data-field="">
+                                                        <button type="button" class="calculate-right-plus btn  btn-number" data-type="plus" data-field="">
                                                             <span class="glyphicon glyphicon-plus"></span>
                                                         </button>
                                                     </span>
@@ -452,7 +452,7 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                                 
                                                 <p>Jugs</p>
                                                 
-                                                <button type="button" class="btn btn-secondary">Calculate</button>
+                                                <button type="button" class="btn btn-secondary calci">Calculate</button>
                                                 
                                                 <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -460,6 +460,7 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                             </div>
                                             <div class="modal-body">
                                             
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Total Jugs</h5>
                                             <div class="table-responsive">
                                                 <table class="table calculate-modal-table">
                                                     <thead>
@@ -697,7 +698,7 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
         value = Number(value) + Number('1');
         $('#quantity').val(value);         
     })
-    $('.quantity-left-minus').click(function(e){
+    $('.calculate-left-minus').click(function(e){
         e.preventDefault();
         value = $('#calculate_price').val() 
         value -= 1;
@@ -706,7 +707,7 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
             $('#calculate_price').val('0'); 
         } 
     })
-    $('.quantity-right-plus').click(function(e){
+    $('.calculate-right-plus').click(function(e){
         e.preventDefault();
         value = $('#calculate_price').val() 
         value = Number(value) + Number('1');
