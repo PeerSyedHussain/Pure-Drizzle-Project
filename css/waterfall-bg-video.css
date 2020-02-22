@@ -5117,6 +5117,10 @@ input[type=range]::-moz-focus-outer {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.calculate-modal-table{
+    
+}
+
 #bg-video{
     position: absolute;
     top:0;
