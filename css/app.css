@@ -5108,8 +5108,57 @@ input[type=range]::-moz-focus-outer {
 .amt{
     font-size: 38px;
 }
+.modal-content{
+    background-image: url('https://media.istockphoto.com/photos/snow-covered-solang-valley-picture-id1157339534?s=2048x2048') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.calculate-modal-table{
+    background-color: #ffffff80;
+}
+.calculate-modal-table thead tr:hover{
+    background-color: unset;
+} 
+.calculate-modal-table tbody tr {
+    background-color: #ffffff6b;
+}
+.calculate-modal-table tbody tr:hover{
+    background-color: #f5f7fa12;
+}
+.calculate-modal-table th{
+    border-bottom: 0px;
+}
+.calculate-modal-table td{
+    border-bottom: 0px;
+}
+#exampleModalCenter4 .modal-content .btn-secondary{
+    background-color:#6c757d5c;
+    border-color:#6c757d5c;
+}
+#exampleModalCenter4 .modal-content .btn-secondary:hover{
+    background-color: #5a6268;
+    border-color: #545b62;
+}
 .plan-selection-option button{
     border-radius:18px;
+}
+.calculate-right-plus{
+    background-color:#3228a75c;
+    border-color:#3228a75c;
+    color: #fff;
+}
+.calculate-right-plus:hover{
+    background-color:#3228a7;
+    border-color:#3228a7;
+}
+.calculate-left-minus{
+    background-color:#359ddc5c;
+    border-color:#359ddc5c;
+    color: #fff;
+}
+.calculate-left-minus:hover{
+    background-color:#1989cc;
+    border-color:#1989cc;
 }
 .price-show{
     margin-top:6px;
