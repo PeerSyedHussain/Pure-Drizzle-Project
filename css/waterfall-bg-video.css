@@ -5195,7 +5195,7 @@ input[type=range]::-moz-focus-outer {
     background-color:#1989cc;
     border-color:#1989cc;
 }
-.plan-selectiton-option button{
+.plan-selection-option button{
     border-radius:18px;
 }
 #calculate_price{
