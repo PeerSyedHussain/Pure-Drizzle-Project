@@ -5112,9 +5112,13 @@ input[type=range]::-moz-focus-outer {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    color:#fff;
+}
+h5{
+    font-size: 1.25rem !important;
 }
 .modal-content.modal-bg-trans{
-    background-color:#000 ;
+    background-color:#0009;
 }
 .calculate-modal-table{
     background-color: #ffffff80;
@@ -5135,12 +5139,12 @@ input[type=range]::-moz-focus-outer {
     border-bottom: 0px;
 }
 #exampleModalCenter4 .modal-content .btn-secondary{
-    background-color:#6c757d5c;
-    border-color:#6c757d5c;
+    background-color:#0404045c;
+    border-color:#3535355c;
 }
 #exampleModalCenter4 .modal-content .btn-secondary:hover{
-    background-color: #5a6268;
-    border-color: #545b62;
+    background-color:#00000075;
+    border-color:#57575775;
 }
 
 #bg-video{
