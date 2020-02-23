@@ -276,7 +276,7 @@ object,
 svg,
 video {
     display: block;
-    vertical-align: middle
+    /* vertical-align: middle */
 }
 
 img,
@@ -920,7 +920,7 @@ a.box:active {
 .input.is-inline,
 .is-inline.textarea {
     display: inline;
-    width: auto
+    /* width: auto */
 }
 
 .textarea {
@@ -2292,10 +2292,6 @@ section>section {
     color: inherit
 }
 
-.ais-refinement-list__count a:hover,
-.tag a:hover {
-    /* text-decoration: underline */
-}
 
 #root button:focus,
 #root input:focus,
@@ -2532,7 +2528,7 @@ input:checked+.slider:before {
         height: 14px;
         margin: 0 .25em 0 0;
         padding: 0;
-        vertical-align: top;
+        /* vertical-align: top; */
         width: 14px;
         background-color: #e5e5e5;
         border-radius: 2px;
@@ -4191,9 +4187,7 @@ a.tag:hover.is-primary {
     color: inherit
 }
 
-.ad-description>a:hover {
-    /* text-decoration: underline */
-}
+
 
 .fade-enter-active,
 .fade-leave-active {
@@ -5116,6 +5110,15 @@ input[type=range]::-moz-focus-outer {
     background-image: url('https://media.istockphoto.com/photos/snow-covered-solang-valley-picture-id1157339534?s=2048x2048') !important;
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    color:#fff;
+}
+
+h5{
+    font-size: 1.25rem !important;
+}
+.modal-content.modal-bg-trans{
+    background-color:#000000b3;
 }
 .calculate-modal-table{
     background-color: #ffffff80;
@@ -5136,13 +5139,14 @@ input[type=range]::-moz-focus-outer {
     border-bottom: 0px;
 }
 #exampleModalCenter4 .modal-content .btn-secondary{
-    background-color:#6c757d5c;
-    border-color:#6c757d5c;
+    background-color:#0404045c;
+    border-color:#3535355c;
 }
 #exampleModalCenter4 .modal-content .btn-secondary:hover{
-    background-color: #5a6268;
-    border-color: #545b62;
+    background-color:#00000075;
+    border-color:#57575775;
 }
+
 .plan-selection-option button{
     border-radius:18px;
 }
@@ -5494,9 +5498,6 @@ input[type=range]::-moz-focus-outer {
     font-weight: 700
 }
 
-.series-banner .generic-content a:hover {
-    /* text-decoration: underline */
-}
 
 .series-banner .generic-content strong {
     color: inherit
@@ -6526,9 +6527,6 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     border: none
 }
 
-.team-meet-jeffrey .content a:hover {
-    /* text-decoration: none */
-}
 
 .team-plans:before {
     top: 0
@@ -10356,7 +10354,6 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
     }
 }
 
-<<<<<<< HEAD
 /* .home-bike{
     animation: bike 5s ease-in infinite;
 }
@@ -10373,5 +10370,3 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         opacity: 0;
     }
 } */
-=======
->>>>>>> 22b680ee430c3fed6c8a49423e6461deb10f1724
