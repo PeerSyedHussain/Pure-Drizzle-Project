@@ -5102,8 +5102,14 @@ input[type=range]::-moz-focus-outer {
 
 .abt-heading{
     text-align: center;
-    margin-bottom: 1
+    margin-bottom: 124px !important;
 }
+.abt-content{
+    background-color:#fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .amt{
     font-size: 38px;
 }
