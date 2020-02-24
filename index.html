@@ -75,9 +75,9 @@ Get Started
                                 Dropdown link
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="/laracast/laracasts.com/bg-pic.html">Option 2</a>
+                                <a class="dropdown-item" href="/laracast/laracasts.com/bg-gif.html">Option 3</a>
+                                <a class="dropdown-item" href="/laracast/laracasts.com/waterfalls-bg-video.html">Option 4</a>
                                 </div>
   
                             </div>
@@ -699,5 +699,20 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
         value = $('#quantity').val() 
         value = Number(value) + Number('1');
         $('#quantity').val(value);         
+    })
+    $('.calculate-left-minus').click(function(e){
+        e.preventDefault();
+        value = $('#calculate_price').val() 
+        value -= 1;
+        $('#calculate_price').val(value); 
+        if(value < 0){
+            $('#calculate_price').val('0'); 
+        } 
+    })
+    $('.calculate-right-plus').click(function(e){
+        e.preventDefault();
+        value = $('#calculate_price').val() 
+        value = Number(value) + Number('1');
+        $('#calculate_price').val(value);         
     })
 </script>
