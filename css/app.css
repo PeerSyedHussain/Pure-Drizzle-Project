@@ -5113,6 +5113,11 @@ input[type=range]::-moz-focus-outer {
     text-align: center;
     margin-bottom: 124px !important;
 }
+@media(max-width:768px){
+    .abt-heading{
+        margin-bottom: 20px !important;   
+    }
+}
 .abt-content{
     background-color:#fff;
     padding: 10px;
@@ -5165,6 +5170,11 @@ h5{
 .plan-selection-option button{
     border-radius:18px;
 }
+@media(max-width:992px){
+    .plan-selection-option .tw-btn{
+        padding: 0.5rem 0.5rem;
+    }   
+}
 .calculate-right-plus{
     background-color:#3228a75c;
     border-color:#3228a75c;
@@ -5193,6 +5203,14 @@ h5{
     left:0;
     width:100%;
 }
+@media(max-width:992px){
+    #bg-video{
+        display:none;
+    }
+    .home-banner{
+        background-color: #1644ad;    
+    }
+}
 .tw-bg-white-transparent{
     background-color: #ffffff70 !important;
 }
@@ -5218,9 +5236,6 @@ h5{
 .quantity-left-minus:hover{
     background-color:#1989cc;
     border-color:#1989cc;
-}
-.plan-selectiton-option button{
-    border-radius:18px;
 }
 
 

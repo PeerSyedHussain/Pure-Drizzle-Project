@@ -5100,6 +5100,12 @@ input[type=range]::-moz-focus-outer {
     overflow: hidden;
     background-blend-mode: multiply;
 }
+@media(max-width:992px){
+    .home-banner{
+        background:unset;
+        background-color: #1644ad;
+    }
+}
 
 .overlay-bg{
     background-color:#00000040;
@@ -5112,6 +5118,11 @@ input[type=range]::-moz-focus-outer {
 .abt-heading{
     text-align: center;
     margin-bottom: 124px !important;
+}
+@media(max-width:768px){
+    .abt-heading{
+        margin-bottom: 20px !important;   
+    }
 }
 .abt-content{
     background-color:#fff;
@@ -5170,6 +5181,11 @@ h5{
 .plan-selection-option button{
     border-radius:18px;
 }
+@media(max-width:992px){
+    .plan-selection-option .tw-btn{
+        padding: 0.5rem 0.5rem;
+    }   
+}
 .calculate-right-plus{
     background-color:#3228a75c;
     border-color:#3228a75c;
@@ -5194,6 +5210,7 @@ h5{
     left:0;
     width:100%;
 }
+
 .tw-bg-white-transparent{
     background-color: #ffffff70 !important;
 }
