@@ -1964,8 +1964,8 @@ a.is-link:hover {
         -webkit-transition: background .3s, border-color .2s;
         transition: background .3s, border-color .2s;
         max-width: 100%;
-        padding-left: 2rem;
-        padding-right: 2rem
+        padding-left: 1rem;
+        padding-right: 1rem
     }
 }
 
