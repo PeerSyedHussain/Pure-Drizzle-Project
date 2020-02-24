@@ -5100,8 +5100,18 @@ input[type=range]::-moz-focus-outer {
     min-height: 100vh !important;
     overflow: hidden;
 }
+.abt-heading{
+    text-align: center;
+    margin-bottom: 124px !important;
+}
+.abt-content{
+    background-color:#fff;
+    padding: 10px;
+    border-radius: 5px;
+}
 .amt{
     font-size: 38px;
+    font-weight: 600;
 }
 .price-show{
     margin-top:6px;
