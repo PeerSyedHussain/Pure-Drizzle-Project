@@ -4288,17 +4288,17 @@ a.tag:hover.is-primary {
 
 .card {
     border: 1px solid rgba(36, 37, 38, .08);
-    width: 345px;
+    /* width: 345px; */
     max-width: 100%;
     border-radius: .9rem;
     background-color: #fff;
     color: #22292f;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     overflow: hidden;
     position: relative
 }
-
+/* 
 @media(min-width:768px) {
     .card {
         width: 335px;
@@ -4311,7 +4311,7 @@ a.tag:hover.is-primary {
         width: 345px;
         height: 258px
     }
-}
+} */
 
 @media(min-width:992px) {
     .card-play-button {
