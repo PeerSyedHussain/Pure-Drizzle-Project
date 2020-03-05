@@ -267,6 +267,7 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                     </div>
 
                                     <div class="text-center">
+                                        <a href='#'class="btn btn-primary previous">Previous</a>
                                         <a href='#'class="btn btn-primary skip-next">Skip</a>
                                         <a href="#" class="btn btn-primary skip-next" >Next</a>
                                     </div>
@@ -306,6 +307,11 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                         </tbody>
                                       </table>
                                    </div>
+                                   
+                                   <div class="text-center">
+                                        <a href='#'class="btn btn-primary previous-2">Previous</a>
+                                        <a href='#'class="btn btn-primary pay">Pay</a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -816,6 +822,7 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
 
 <script type="text/javascript">
     let value ;
+    
     $('.quantity-left-minus').click(function(e){
         e.preventDefault();
         value = $('#quantity').val() 
@@ -825,31 +832,52 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
             $('#quantity').val('0'); 
         } 
     })
+    
     $('.quantity-right-plus').click(function(e){
         e.preventDefault();
         value = $('#quantity').val() 
         value = Number(value) + Number('1');
         $('#quantity').val(value);         
     })
+    
     $('#step1').click(function(){
         $('#md-tab-standard').removeClass('active')
         $('#md-tab-gold').addClass('active')
         $('#md-tab-standard').css("pointer-events", "auto");
         $('#md-page-gold').addClass('active');
         $('#md-page-standard').removeClass('active');
-
-        // $('.md-tab.active').prev().css("pointer-events", "auto");
+        if( $('#quantity').val(value) == 0 ){
+            
+        }
+        console.log(value)
     })
+    
     $('.skip-next').click(function(){
         $('#md-tab-gold').removeClass('active')
         $('#md-tab-platinum').addClass('active')
         $('#md-page-gold').removeClass('active');
         $('#md-page-platinum').addClass('active');
         $('#md-tab-gold').css("pointer-events", "auto");
-        // $('.md-tab.active').removeClass('active').next().addClass('active');
-        // $('.md-page.active').removeClass('active').next().addClass('active');
-        // $('.md-tab.active').prev().css("pointer-events", "auto");
     })
+    
+    $('.previous').click(function(){
+        $('#md-tab-gold').removeClass('active')
+        $('#md-tab-standard').addClass('active')
+        $('#md-page-gold').removeClass('active');
+        $('#md-page-standard').addClass('active');
+        $('#md-tab-gold').css("pointer-events", "auto");
+    })
+    
+    $('.previous-2').click(function(){
+        $('#md-tab-platinum').removeClass('active')
+        $('#md-tab-gold').addClass('active')
+        $('#md-page-platinum').removeClass('active');
+        $('#md-page-gold').addClass('active');
+        $('#md-tab-platinum').css("pointer-events", "auto");
+        $('#md-tab-standard').css("pointer-events", "auto");
+
+    })
+    
     $('.md-tab').click(function(){
         $('.md-tab.active').removeClass('active');
         let curr = $(this);
