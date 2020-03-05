@@ -274,19 +274,12 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                             </div>
                             <div id="md-page-platinum" class="md-page  tab-pane col-md-10">
                                 <div class="card">
-                                   
+                                   <div class="table-responsive">
+                                    
+                                   </div>
                                 </div>
                             </div>
-                            <div id="md-page-platinum" class="md-page  tab-pane">
-                                <div class="card" >
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title3</h5>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                  </div>
-                            </div>
+                            
                        </div>
                        <div class="row tw-justify-center my-2">
                             <p class="tw-text-white">Or Choose any one plan Below</p>
@@ -820,6 +813,7 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
     })
     $('.md-tab').click(function(){
         $('.md-tab.active').removeClass('active');
-        $(this).addClass('active');
+        let curr = $(this);
+        curr.addClass('active');      
     })
 </script>
