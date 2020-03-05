@@ -10427,6 +10427,8 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
       margin-bottom: 15px;
       width: 30%;
       pointer-events: auto;
+      position: relative;
+      margin-right: 5px;
       opacity: 0.5; }
       #md-header .bread-box li.md-tab.active {
         cursor: pointer;
@@ -10458,10 +10460,12 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         z-index: 2; }
       #md-header .bread-box li.md-tab:hover {
         background: transparent !important;
-        border-color: #fbfbfb !important;
+        /* border-color: #fbfbfb !important; */
         height: 0; }
         #md-header .bread-box li.md-tab:hover:after {
-          border-color: transparent; }
+          border-left: 20px solid #ececec;
+          /* border-color: transparent;  */
+          }
       #md-header .bread-box li.md-tab:after {
         content: '\0000a0';
         width: 0;
