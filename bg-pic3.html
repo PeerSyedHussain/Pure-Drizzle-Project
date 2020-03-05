@@ -834,14 +834,21 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
     $('#step1').click(function(){
         $('#md-tab-standard').removeClass('active')
         $('#md-tab-gold').addClass('active')
-        $('#md-tab-gold').css("pointer-events", "auto");
+        $('#md-tab-standard').css("pointer-events", "auto");
         $('#md-page-gold').addClass('active');
+        $('#md-page-standard').removeClass('active');
+
         // $('.md-tab.active').prev().css("pointer-events", "auto");
     })
     $('.skip-next').click(function(){
-        $('.md-tab.active').removeClass('active').next().addClass('active');
-        $('.md-page.active').removeClass('active').next().addClass('active');
-        $('.md-tab.active').prev().css("pointer-events", "auto");
+        $('#md-tab-gold').removeClass('active')
+        $('#md-tab-platinum').addClass('active')
+        $('#md-page-gold').removeClass('active');
+        $('#md-page-platinum').addClass('active');
+        $('#md-tab-gold').css("pointer-events", "auto");
+        // $('.md-tab.active').removeClass('active').next().addClass('active');
+        // $('.md-page.active').removeClass('active').next().addClass('active');
+        // $('.md-tab.active').prev().css("pointer-events", "auto");
     })
     $('.md-tab').click(function(){
         $('.md-tab.active').removeClass('active');
