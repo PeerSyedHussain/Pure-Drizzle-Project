@@ -128,13 +128,13 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                     </div>
                     <div class="container tw-w-full tw-mx-auto  phone:tw-mt-2 tw-justify-center">
                         <div >
-                            <form class="d-flex justify-content-between align-items-center user-form">
+                            <form class="d-flex justify-content-center align-items-center user-form">
                                 <div class="form-group col-lg-4 col-md-12 ">
-                                  <label for="location" class="tw-text-white my-2">Where do you want us to deliver?</label>
-                                  <input type="text" class="form-control" id="location" placeholder="Type your address here">
+                                  <label for="to-check-loaction" class="tw-text-white my-2">Check Availability</label>
+                                  <input type="text" class="form-control" id="to-check-loaction" placeholder="Type your address here">
                                 </div>
                                 
-                                <div class="form-group col-lg-2 col-md-12 tw-text-center">
+                                <!-- <div class="form-group col-lg-2 col-md-12 tw-text-center">
                                     <label for="quantity"class="tw-text-white my-2">Jugs You Need?</label>
                                     <div class="input-group">
                                         <span class="input-group-btn">
@@ -149,51 +149,43 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                             </button>
                                         </span>
                                     </div>
-                                    <!-- <div class="d-flex tw-justify-center align-items-center">
-                                        <span>-</span>
-                                        <input type="text" class="form-control tw-text-center w-50" id="quantity" placeholder="jugs">
-                                        <span>+</span>
-                                    </div> -->
                                 </div>
                                 <div class="form-group col-lg-3 col-md-12 mb-0 price-show ">
-                                    <!-- <label class=" tw-text-white ">Price</label> -->
+                                     <label class=" tw-text-white ">Price</label> 
                                     <div class='d-flex tw-justify-left align-items-center'>
                                         <span class="dollar">$</span>
                                         <span class="amt">10</span>
                                         <span style="font-size: 30px;"> /jug</span>
                                     </div>
-                                    <!-- <label for="Price"class=" tw-text-white my-2">Price</label>
-                                    <input type="text" disabled class="form-control" id="Price" placeholder="Price" value="$10/jug"> -->
-                                </div>
-                                <!-- <div class="form-group col-lg-3 col-md-12 ">
                                     <label for="Price"class=" tw-text-white my-2">Price</label>
-                                    <input type="text" disabled class="form-control" id="Price" placeholder="Price" value="$10/jug">
+                                    <input type="text" disabled class="form-control" id="Price" placeholder="Price" value="$10/jug"> 
                                 </div> -->
-                                <div class="form-group mb-0 col-lg-2 text-right col-md-12 mt-4">
-                                    <button type="button" class="tw-bg-white  tw-btn mobile:tw-mx-auto tw-text-black tw-border-grey-panel tw-bg-grey-panel">Order Now</button>
+                                
+                                <div class="form-group mb-0 col-lg-2 text-center col-md-12 mt-4">
+                                    <button type="button" class="tw-bg-white  tw-btn mobile:tw-mx-auto tw-text-black tw-border-grey-panel tw-bg-grey-panel">Check</button>
                                 </div>
                               </form>
-                              
-                              
-                              <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="#">Step1</a></li>
-                                  <li class="breadcrumb-item"><a href="#">Step2</a></li>
-                                  <li class="breadcrumb-item active" aria-current="page">Step3</li>
-                                </ol>
-                              </nav>
-                              
-                              <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                              </div>
                         </div>
                                 
-                       
+                       <div id='md-header' class="related-tabs">
+                            <ul class="nav nav-tabs bread-box">
+                                <li class="active md-tab" id='md-tab-standard'>
+                                    <a class="active step1" data-toggle="tab" href="#md-page-standard">
+                                        Choose Jug
+                                    </a>
+                                </li>
+                                <li class=" md-tab" id='md-tab-gold'>
+                                    <a class="" data-toggle="tab" href="#md-page-gold">
+                                        Choose Cooler
+                                    </a>
+                                </li>
+                                <li class="active md-tab" id='md-tab-platinum'>
+                                    <a class="" data-toggle="tab" href="#md-page-platinum">
+                                        Payment
+                                    </a>
+                                </li>
+                            </ul>
+                       </div>
                        <div class="row tw-justify-center my-2">
                             <p class="tw-text-white">Or Choose any one plan Below</p>
                        </div>
