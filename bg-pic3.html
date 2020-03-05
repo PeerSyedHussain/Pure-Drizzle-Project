@@ -218,7 +218,7 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                       
 
                                         <div class="text-center">
-                                            <a href="#" class="btn btn-primary">Next</a>
+                                            <a href="#" class="btn btn-primary" id='step1'>Next</a>
                                         </div>
                                     </div>
                                   </div>
@@ -267,8 +267,8 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                     </div>
 
                                     <div class="text-center">
-                                        <a href='#'class="btn btn-primary">Skip</a>
-                                        <a href="#" class="btn btn-primary">Next</a>
+                                        <a href='#'class="btn btn-primary skip-next">Skip</a>
+                                        <a href="#" class="btn btn-primary skip-next" >Next</a>
                                     </div>
                                   </div>
                             </div>
@@ -808,5 +808,18 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
         value = $('#quantity').val() 
         value = Number(value) + Number('1');
         $('#quantity').val(value);         
+    })
+    $('#step1').click(function(){
+        $('.md-tab.active').removeClass('active').next().addClass('active');
+        $('.md-page.active').removeClass('active').next().addClass('active');
+        $('.md-tab.active').prev().css("pointer-events", "auto");
+    })
+    $('.skip-next').click(function(){
+        $('.md-tab.active').removeClass('active').next().addClass('active');
+        $('.md-page.active').removeClass('active').next().addClass('active')
+    })
+    $('.md-tab').click(function(){
+        $('.md-tab.active').removeClass('active');
+        $(this).addClass('active');
     })
 </script>

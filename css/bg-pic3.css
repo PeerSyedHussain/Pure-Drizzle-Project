@@ -10426,7 +10426,7 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
       display: inline-block;
       margin-bottom: 15px;
       width: 30%;
-      pointer-events: auto;
+      /* pointer-events: none; */
       position: relative;
       margin-right: 5px;
       opacity: 0.5; }
@@ -10436,6 +10436,7 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         height: 0;
         border-top: 20px solid #596875 !important;
         border-bottom: 20px solid #596875 !important;
+        pointer-events: auto;
         border-color: #303030 !important; }
         #md-header .bread-box li.md-tab.active a {
           cursor: pointer;
