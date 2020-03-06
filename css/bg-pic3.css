@@ -5178,9 +5178,6 @@ h5{
     border-color:#57575775;
 }
 
-.plan-selection-option button{
-    border-radius:18px;
-}
 @media(max-width:992px){
     .plan-selection-option .tw-btn{
         padding: 0.5rem 0.5rem;
@@ -10522,3 +10519,11 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
       cursor: pointer;
       opacity: 1;
   }
+  .plan-selection-option button{
+    border-radius:18px;
+    padding:6px 4px;
+}
+.plan-selection-option a{
+      padding-left:0.35rem;
+      padding-right:0.35rem
+}
