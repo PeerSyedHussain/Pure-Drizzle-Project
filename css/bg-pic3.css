@@ -10515,3 +10515,10 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
       border-color: transparent !important; }
   
   /*Wizard End*/
+  .close-fa{
+      opacity: 0.5;
+  }
+  .close-fa:hover{
+      cursor: pointer;
+      opacity: 1;
+  }
