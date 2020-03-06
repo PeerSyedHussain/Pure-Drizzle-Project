@@ -169,17 +169,17 @@ style=" fill:#000000;"class="tw-mb-4 tw-text-white xl:tw-text-transparent-25 hov
                                 
                        <div id='md-header' class="related-tabs d-flex tw-justify-center">
                             <ul class="nav nav-tabs bread-box" >
-                                <li class="active md-tab" id='md-tab-standard'>
+                                <li class="active md-tab" id='md-tab-standard' data-loc-subject="standard">
                                     <a class="active step1" data-toggle="tab" href="#md-page-standard">
                                         Choose Jug
                                     </a>
                                 </li>
-                                <li class=" md-tab" id='md-tab-gold'>
-                                    <a class="" data-toggle="tab" href="#md-page-gold">
+                                <li class=" md-tab" id='md-tab-gold' data-loc-subject="gold">
+                                    <a class="" data-toggle="tab" href="#md-page-gold" >
                                         Choose Cooler
                                     </a>
                                 </li>
-                                <li class="md-tab" id='md-tab-platinum'>
+                                <li class="md-tab" id='md-tab-platinum' data-loc-subject="platinum">
                                     <a class="" data-toggle="tab" href="#md-page-platinum">
                                         Payment
                                     </a>
@@ -841,15 +841,16 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
     })
     
     $('#step1').click(function(){
-        $('#md-tab-standard').removeClass('active')
-        $('#md-tab-gold').addClass('active')
-        $('#md-tab-standard').css("pointer-events", "auto");
-        $('#md-page-gold').addClass('active');
-        $('#md-page-standard').removeClass('active');
-        if( $('#quantity').val(value) == 0 ){
-            
+        if( $('#quantity').val() == 0 ){
+            alert('u should atleast order 1 can')
         }
-        console.log(value)
+        else{
+            $('#md-tab-standard').removeClass('active')
+            $('#md-tab-gold').addClass('active')
+            $('#md-tab-standard').css("pointer-events", "auto");
+            $('#md-page-gold').addClass('active');
+            $('#md-page-standard').removeClass('active');   
+        }
     })
     
     $('.skip-next').click(function(){
@@ -858,6 +859,7 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
         $('#md-page-gold').removeClass('active');
         $('#md-page-platinum').addClass('active');
         $('#md-tab-gold').css("pointer-events", "auto");
+        $('#md-tab-platinum').css("pointer-events", "auto");
     })
     
     $('.previous').click(function(){
@@ -878,9 +880,25 @@ style=" fill:#000000;"class="tw-w-8 md:tw-w-6 tw-text-white hover:tw-text-black 
 
     })
     
-    $('.md-tab').click(function(){
+    $('.md-tab').click(function(e){
+        e.preventDefault();
         $('.md-tab.active').removeClass('active');
-        let curr = $(this);
-        curr.addClass('active');      
+        $(this).addClass('active'); 
+        var data = $('.md-tab.active').attr('data-loc-subject');
+        if(data === 'standard'){
+            $('#md-page-gold').removeClass('active')
+            $('#md-page-standard').addClass('active')
+            $('#md-page-platinum').removeClass('active')
+        }   
+        else if(data === 'gold'){
+            $('#md-page-gold').addClass('active')
+            $('#md-page-standard').removeClass('active');
+            $('#md-page-platinum').removeClass('active')
+        }     
+        else{
+            $('#md-page-platinum').addClass('active');
+            $('#md-page-standard').removeClass('active');
+            $('#md-page-gold').removeClass('active');
+        }
     })
 </script>

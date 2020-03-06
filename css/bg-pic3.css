@@ -10412,8 +10412,9 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
 /*Wizard Start */
 #md-header .bread-box {
     pointer-events: none;
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     padding-left: 0px;
     margin-left: 0px;
     border-bottom: 0px; }
@@ -10459,6 +10460,12 @@ body.skill .skill-thumbnail-card.is-testing.is-current {
         white-space: nowrap;
         padding: 10px 5px;
         z-index: 2; }
+      @media(max-width:575px){
+        #md-header .bread-box li.md-tab a{
+            text-overflow: ellipsis;
+            overflow: auto;
+        }
+      }
       #md-header .bread-box li.md-tab:hover {
         background: transparent !important;
         /* border-color: #fbfbfb !important; */
